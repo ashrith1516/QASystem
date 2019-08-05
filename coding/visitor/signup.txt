@@ -1,0 +1,73 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+
+namespace QASystem.Visitor
+{
+    public partial class SignUp : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!this.IsPostBack)
+
+                txtFName.Focus();
+        }
+
+        protected void btnRegister_Click(object sender, EventArgs e)
+        {
+            BLL obj = new BLL();
+
+            try
+            {
+                
+
+                if (obj.CheckMemberEmailId(txtEmailId.Text))
+                {
+                    string photoName = System.IO.Path.GetFileName(fileuploadPhoto.PostedFile.FileName);
+
+                    int index = photoName.LastIndexOf('.');
+                    string ext = photoName.Substring(index + 1);
+
+                    string photoPath = Server.MapPath("/Visitor/Photos/" + txtEmailId.Text + "." + ext);
+                    fileuploadPhoto.PostedFile.SaveAs(photoPath);
+
+                    string dbPath = "/Visitor/Photos/" + txtEmailId.Text + "." + ext;
+
+                    obj.InsertMember(txtEmailId.Text, txtPassword.Text, txtFName.Text, txtLName.Text, txtAddress.Text, txtContactNo.Text, txtOccupation.Text, dbPath, DateTime.Now);
+                    ClearTxts();
+
+                    ClientScript.RegisterStartupScript(this.GetType(), "key", "<script>alert('User Registration is Successfull')</script>");
+                }
+                else
+                {
+                    ClientScript.RegisterStartupScript(this.GetType(), "key", "<script>alert('EmailId already Exisits!!!')</script>");
+                }
+            }
+            catch
+            {
+
+            }
+
+        }
+
+        //function to clear the texbox contents
+        private void ClearTxts()
+        {
+            txtAddress.Text = string.Empty;
+            txtContactNo.Text = string.Empty;
+            txtEmailId.Text = string.Empty;
+            txtFName.Text = string.Empty;
+            txtLName.Text = string.Empty;
+            txtOccupation.Text = string.Empty;
+        }
+
+       
+
+
+        
+    }
+}

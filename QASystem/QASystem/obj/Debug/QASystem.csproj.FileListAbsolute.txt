@@ -1,0 +1,10 @@
+D:\Academic 2015-2016\Major Projects\A data mining approach to predict users' Next question in QA system\Project\QASystem\QASystem\bin\QASystem.dll
+D:\Academic 2015-2016\Major Projects\A data mining approach to predict users' Next question in QA system\Project\QASystem\QASystem\bin\QASystem.pdb
+D:\Academic 2015-2016\Major Projects\A data mining approach to predict users' Next question in QA system\Project\QASystem\QASystem\obj\Debug\ResolveAssemblyReference.cache
+D:\Academic 2015-2016\Major Projects\A data mining approach to predict users' Next question in QA system\Project\QASystem\QASystem\obj\Debug\QASystem.dll
+D:\Academic 2015-2016\Major Projects\A data mining approach to predict users' Next question in QA system\Project\QASystem\QASystem\obj\Debug\QASystem.pdb
+F:\Project\Project\Project\QASystem\QASystem\bin\QASystem.dll
+F:\Project\Project\Project\QASystem\QASystem\bin\QASystem.pdb
+F:\Project\Project\Project\QASystem\QASystem\obj\Debug\QASystem.dll
+F:\Project\Project\Project\QASystem\QASystem\obj\Debug\QASystem.pdb
+F:\Project\Project\Project\QASystem\QASystem\obj\Debug\QASystem.csprojResolveAssemblyReference.cache
